@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Form</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+</head>
+<body ng-app="consumeService">
+	<div ng-controller="carController">
+
+	<form novalidate name="carForm" class="simple-form">
+		<table>
+			<tr>
+				<td>Año: </td>
+				<td><input type="text" ng-model="car.txtYear" required></td>
+			</tr>
+			<tr>
+				<td>Modelo: </td>
+				<td><input type="text" ng-model="car.txtMod"></td>
+			</tr>
+			<tr>
+				<td>Fabricante: </td>
+				<td><input type="text" ng-model="car.txtVendor"></input></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" ng-click="update(car)" value="save" /></td>
+			</tr>
+		</table>
+		
+		<pre>obj = {{ obj | json }}</pre>
+<!-- 		<div ng-show="carForm.txtYear.$touched">this value is invalid</div> -->
+	
+	</form>
+	</div><!-- end of mg-controller -->
+	
+		<script>
+			console.log("angular init");
+		
+			angular.module("consumeService",[])
+				.controller("carController",['$scope', function($scope){
+					console.log("init carController");
+					
+					$scope.update = function(car){
+						$scope.obj = angular.copy($scope.car);
+						console.log("click in update()");
+						console.log("modelo: "+$scope.obj.txtMod);
+					}
+					
+				
+				}
+				
+			]);
+		
+	</script>
+	
+</body>
+</html>

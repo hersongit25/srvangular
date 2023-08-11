@@ -1,0 +1,20 @@
+
+// ======= url's =====
+http://localhost:8080/angular/
+http://localhost:8080/angular/products
+http://localhost:8080/angular/add-cars
+
+// ======= compile =======
+mvn install
+
+
+// ======= deploy with tomcat ======
+
+java -jar target/srvangular-0.0.1-SNAPSHOT.jar
+
+// ======== exception =============
+
+@servise instantiate exception+spring boot
+
+
+

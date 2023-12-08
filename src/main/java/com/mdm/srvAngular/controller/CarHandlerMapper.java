@@ -17,7 +17,7 @@ public class CarHandlerMapper {
 //	========== Views =========
 	@RequestMapping(value="/")
 	public String init() {
-		return "hello";
+		return "hello updated on container";
 	}
 	
 	@RequestMapping(value="/addingcars")

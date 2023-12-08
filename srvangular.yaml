@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: srvangular-pod
+spec:
+  containers:
+    - name: srvangular-pod
+      image: effort25/kube-images:srvangular-tag
+      ports:
+        - containerPort: 6379

@@ -1,11 +1,21 @@
 package com.mdm.srvAngular.model;
 
-//@Component("carBean")
+import org.springframework.stereotype.Component;
+
+@Component("carBean")
 public class CarEntity {
 	
 	protected int year;
 	protected String model;
 	protected String vendor;
+	
+	public CarEntity() {}
+	
+	public CarEntity( int year, String mod, String vendor ) {
+		this.year = year;
+		this.model = mod;
+		this.vendor = vendor;
+	}
 	
 	public int getYear() {
 		return year;
